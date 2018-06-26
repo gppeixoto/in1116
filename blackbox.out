@@ -1,0 +1,59 @@
+blackbox version 45
+command line:  ./blackbox -o monkey-bananas-dom.pddl -f monkey-bananas-prob.pddl
+
+Begin solver specification
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: monkey-bananas-dom.pddl
+Loading fact file: monkey-bananas-prob.pddl
+Problem name: gpp-prob
+Facts loaded.
+time: 1, 8 facts and 3 exclusive pairs.
+time: 2, 11 facts and 15 exclusive pairs.
+time: 3, 11 facts and 7 exclusive pairs.
+time: 4, 12 facts and 11 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 13 facts and 15 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 15 facts and 23 exclusive pairs.
+Goals first reachable in 6 steps.
+216 nodes created.
+
+####################################################
+goals at time 7:
+  has-banana_themonkey_thebanana at-obj_themonkey_loca 
+
+
+----------------------------------------------------
+** Turning off completeness check **
+Converting graph to wff
+number of action variables = 114
+number of fluent variables = 62
+total number variables = 176
+number clauses = 1080
+Result is Sat
+Iteration was 0
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (move themonkey loca locb thebanana)
+2 (push themonkey thebox locb locc thebanana)
+3 (climb themonkey thebox locc)
+4 (pickup themonkey thebanana locc)
+5 (getdown themonkey thebanana locc)
+6 (carry themonkey thebanana locc loca)
+End plan
+----------------------------------------------------
+
+6 total actions in plan
+0 entries in hash table, 
+5 total set-creation steps (entries + hits + plan length - 1)
+0 actions tried
+
+####################################################
+Total elapsed time:   0.01 seconds
+Time in milliseconds: 5
+
+####################################################
